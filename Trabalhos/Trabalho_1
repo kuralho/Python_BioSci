@@ -1,0 +1,35 @@
+Disciplina: PYTHON PARA BIOCIENTISTAS 
+Professor: Célio Junior
+Aluna: Juliana Coelho Rodrigues Lima
+
+TRABALHO 1 – CRIAR UM ALGORITMO
+
+Algoritmo: FizzBuzz
+Input: lista de números de 1 até 100
+Output: lista de números de 1 até 100 com numerais e onde for múltiplos de 3 será Fizz, múltiplos de 5 será Buzz e múltiplo de ambos será FizzBuzz
+
+1. Criar uma lista de 1 até 100;
+2. Encontrar os múltiplos de 3, 5 e 3 e 5 ao mesmo tempo;
+3. Trocar o número por “fizz”, “buzz”e “fizbuzz”;
+Return: Lista numéricos, fiz, buzz e fizzbuzz
+
+Esboço:
+Lista[]
+for X in Lista do:
+if *3
+Fizz
+if *5
+Buzz
+if *3 and 5*
+FizzBuzz
+Return: lista de 1 até 100, com Fizz, Buzz e FizzBuzz end
+
+Código: 
+------------------------------------------------------------------------------------------------------------------- 
+L = range(0,101) #criar a lista
+for X in L:
+ if X % 3 == 0 and X % 5 == 0: print("FizzBuzz") #múltiplos de 3 e 5 apenas 
+     elif X % 3 == 0: print("Fizz") #múltiplos de 3
+     elif X % 5 == 0: print("Buzz") #múltiplos de 5
+ else: print(X) #”imprime” apenas números
+-------------------------------------------------------------------------------------------------------------------
