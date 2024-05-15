@@ -1,0 +1,58 @@
+Disciplina: PYTHON PARA BIOCIENTISTAS
+Professor: Célio Junior
+Aluna: Juliana Coelho Rodrigues Lima
+
+TRABALHO 2 – Diagrama de Venn
+
+Algoritmo: Sets de um Diagrama de Venn
+Input: três conjuntos
+Output: sets de cada região dos conjuntos
+
+1.	Criar os conjuntos;
+2.	Definir as regiões;
+3.	Imprimir os valores de cada região.
+
+Return: Valores dos sets de cada região.
+
+Código:
+-------------------------------------------------------------------------------------------------------------------
+#Conjuntos (sets)
+a1 = {2, 3, 4, 5, 6}             
+a2 = {1, 2, 4, 5}
+a3 = {0,1,5,7,2,4}         
+
+#Apenas o que se encontra em a1, a2 e a3, respectivamente
+A = a1 - a2              
+B = a2 - a1             
+C = a2 - a3               
+
+#Definido as regiões
+#Regiões 1, 3 e 4: 
+r1 = A - B - C
+r3 = B - A - C
+r4 = C - A - B
+
+#Regiões 2, 5 e 6:
+r2 = C.intersection(a2)
+r5 = B.intersection(a3)
+r6 = A.intersection(a3)
+
+#Região 7:
+r7 = a1.intersection(a2).intersection(a3)
+
+#Um dicinário foi criado para ser usado no print
+regiao = {
+    "Região 1": r1,
+    "Região 2": r2,
+    "Região 3": r3,
+    "Região 4": r4,
+    "Região 5": r5,
+    "Região 6": r6,
+    "Região 7": r7
+}
+
+#Imprimindo os resultados
+print('Oi, temos os seguintes resultados:')
+for chave, valor in regiao.items():
+    print(f'{chave}: {valor}')
+-------------------------------------------------------------------------------------------------------------------
