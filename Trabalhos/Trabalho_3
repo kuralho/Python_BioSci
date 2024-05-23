@@ -1,0 +1,87 @@
+Disciplina: PYTHON PARA BIOCIENTISTAS
+Professor: Célio Junior
+Aluna: Juliana Coelho Rodrigues Lima
+
+TRABALHO 3 – Resolvendo 5 problemas do Rosalind
+
+________________________________________________________________________________________________________________________________________________________________________________________
+
+#Problema 1 - Variables and Some Arithmetic
+Given: Two positive integers a and b, each less than 1000.
+Return: The integer corresponding to the square of the hypotenuse of the right triangle whose legs have lengths a and b.
+
+SOLUÇÃO:
+def hipotenusa (a,b):
+    result = (a**2)+(b**2)
+    return result
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Problema 2 - Strings and lists
+Given: A string s of length at most 200 letters and four integers a, b, c and d.
+Return: The slice of this string from indices a through b and c through d (with space in between), inclusively. In other words, we should include elements s[b] and s[d] in our slice.
+
+SOLUÇÃO:
+def letras_cortadas(s:str, a, b, c, d):
+    if len(s) <= 200 and a < b < c < d < len(s):
+        str1 = s[a:b+1]
+        str2 = s[c:d+1]
+        return str1 + " " + str2
+    else:
+        return "você não atendeu as condições"
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Problema 3 - Conditions and Loops
+Given: Two positive integers a and b (a<b<1000).
+Return: The sum of all odd integers from a through b, inclusively.
+
+SOLUÇÃO:
+def inteiros(a, b):
+    y = 0
+    if b < 10000 and a < b:  
+        for x in range(a, b + 1):
+            if x % 2 == 1:
+                y += x
+        return y
+    else:
+        return “valores errados”  
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Problema 4 - Intro to Python dictionary
+Given: A string s of length at most 10000 letters.
+Return: The number of occurrences of each word in s, where words are separated by spaces. Words are case-sensitive, and the lines in the output can be in any order.
+
+SOLUÇÃO:
+def maiuscula(s):
+    y = {}
+    if len(s) <= 10000:
+        palavras = s.split()  
+        for palavra in palavras: 
+            if palavra in y:
+                y[palavra] += 1  
+            else:
+                y[palavra] = 1
+        
+        tupla = list(y.items())          
+        for chave, valor in tupla:
+            print(chave, valor)
+    return chave
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
