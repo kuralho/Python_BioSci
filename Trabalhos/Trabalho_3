@@ -69,6 +69,21 @@ def maiuscula(s):
             print(chave, valor)
     return chave
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Problema 5 - Working with Files
+Given: A file containing at most 1000 lines.
+Return: A file containing all the even-numbered lines from the original file. Assume 1-based numbering of lines.
+
+SOLUÇÃO:
+def reescrevendo(seu_arquivo):
+    with open(seu_arquivo, 'r') as infile:
+        lines = infile.readlines()
+    with open(seu_arquivo, 'w') as outfile:
+        for idx, row in enumerate(lines):
+            if (idx + 1) % 2 == 0:
+                outfile.write(row)
+    return seu_arquivo
 
 
 
